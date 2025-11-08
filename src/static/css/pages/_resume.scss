@@ -1,0 +1,210 @@
+/* Resume */
+
+// The resume page uses the .post wrapper for consistent styling
+#resume {
+  h3 {
+       color: #ec6b09;
+  }
+  h3:nth-child(2) {
+    margin-top: 1rem;
+  }
+  .link-container {
+    padding-top: 1em;
+    h4 {
+      text-decoration: none;
+      border-bottom: none;
+      display: inline-flex;
+
+      a {
+        padding: 0 1em;
+        margin: 0;
+      }
+    }
+  }
+  .skill-row-container {
+    direction: ltr !important;
+  }
+
+  // Common section styles
+  .education,
+  .experience,
+  .skills,
+  .courses,
+  .references {
+    .title {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+  }
+
+  // Experience section
+  .experience {
+    .title {
+      text-align: center;
+    }
+  }
+
+  .jobs-container {
+    margin-bottom: 2em;
+
+    .points {
+      li {
+        margin: 0;
+        padding: 0;
+        font-size: 0.9em;
+      }
+    }
+  }
+
+  // Courses section
+  .courses {
+    padding-top: 1.6em;
+
+    .title {
+      text-align: center;
+    }
+
+    .course-list {
+      text-align: center;
+
+      h4 {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  // Skills section
+  .skills {
+    margin-top: 2em;
+
+    .title {
+      text-align: center;
+
+      p {
+        font-size: 0.9em;
+      }
+    }
+  }
+
+  // Summary text in experience
+  .summary {
+    margin-bottom: 0.5em;
+    font-size: 0.9em;
+
+    // Override any code block styling from markdown
+    code,
+    pre {
+      background: none;
+      border: none;
+      padding: 0;
+      margin: 0;
+      font-family: inherit;
+      font-size: inherit;
+    }
+
+    pre code {
+      display: inline;
+      line-height: inherit;
+    }
+  }
+
+  // References section
+  .references {
+    margin: 2em 0;
+
+    .title {
+      text-align: center;
+    }
+  }
+
+  // Anchor links
+  .link-to {
+    position: relative;
+    top: -4.5em;
+  }
+}
+
+// Date ranges
+.daterange {
+  margin-bottom: 0.2em;
+}
+
+// Education degrees
+.degree-container {
+  h4 {
+    font-weight: normal;
+  }
+
+  .degree {
+    margin-bottom: 0.1em;
+    text-transform: none;
+    letter-spacing: 0.16em;
+    font-size: 0.8em;
+  }
+
+  .school {
+    text-transform: none;
+    padding-top: 0.3em;
+    margin-bottom: 1em;
+  }
+}
+
+// Course styling
+.courses {
+  .course-number {
+    display: inline;
+  }
+
+  .course-name {
+    display: inline;
+    font-family: _font(family-heading);
+    font-size: 0.8rem;   
+     font-weight: 400;
+    letter-spacing: 0.25em;
+    line-height: 2.5;
+    list-style: none;
+
+    margin-top: -1em;
+    text-transform: uppercase;
+  }
+
+  ul {
+    list-style: none;
+  }
+  ul li {
+    display: inline;
+    list-style: none;
+  }
+}
+a[href="/contact/"]  
+{
+  border: none;
+  h3 {
+    border: 1px solid rgba(128, 128, 128, 0.508);
+    padding: 0.5rem;
+    display: inline-block;
+    color: rgb(110, 110, 110) !important;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+
+}
+}
+.course-dot {
+  display: inline;
+}
+
+// Responsive
+@include breakpoint(small) {
+  .course-dot {
+    display: none;
+  }
+
+  .course-container a {
+    display: block;
+  }
+}

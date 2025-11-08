@@ -1,0 +1,84 @@
+/* Intro */
+
+#intro {
+  .logo {
+    border-bottom: 0;
+    display: inline-block;
+    margin: 0 0 (_size(element-margin) * 0.5) 0;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 0 6px grey;
+    width: 25em;
+    height: 25em;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    img {
+      display: block;
+      width: 100%;
+      border-radius: 10px;
+      height: 100%;
+    }
+  }
+
+  header {
+    h2 {
+      font-size: 1.5em;
+      font-weight: _font(weight-heading-extrabold);
+    }
+
+    p {
+      font-size: 0.8em;
+    }
+    a {
+      color: rgb(255, 145, 0);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+  }
+
+
+  @include breakpoint(large) {
+    margin: 0 0 _size(section-spacing) 0;
+    text-align: center;
+
+    header {
+      h2 {
+        font-size: 2em;
+      }
+
+      p {
+        font-size: 0.7em;
+      }
+    }
+  }
+
+  @include breakpoint(small) {
+    margin: 0 0 _size(section-spacing-small) 0;
+    padding: 1.25em 0;
+
+    > :last-child {
+      margin-bottom: 0;
+    }
+
+    .logo {
+      margin: 0 0 (_size(element-margin) * 0.25) 0;
+    }
+
+    header {
+      h2 {
+        font-size: 1.25em;
+      }
+
+      > :last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+  .actions {
+    li {
+    }
+  }
