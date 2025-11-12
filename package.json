@@ -11,11 +11,8 @@
     "node": ">=20.x"
   },
   "scripts": {
-    "dev": "cross-env TURBOPACK=1 next dev --turbopack",
     "dev:webpack": "next dev",
-    "build": "next build",
     "build:turbo": "TURBOPACK=1 next build --turbopack",
-    "start": "next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss}\"",
@@ -26,7 +23,10 @@
     "predeploy": "npm run build",
     "analyze": "ANALYZE=true npm run build",
     "analyze:server": "BUNDLE_ANALYZE=server npm run analyze",
-    "analyze:browser": "BUNDLE_ANALYZE=browser npm run analyze"
+    "analyze:browser": "BUNDLE_ANALYZE=browser npm run analyze",
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.0.1",

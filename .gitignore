@@ -67,3 +67,7 @@ next-env.d.ts
 next.config.ts
 sample.env
 tsconfig.json
+.nvmrc
+.prettierrc.json
+jest.config.ts
+postcss.config.js
